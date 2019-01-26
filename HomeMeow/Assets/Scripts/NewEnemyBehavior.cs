@@ -7,14 +7,15 @@ public class NewEnemyBehavior : MonoBehaviour
     private GameObject player;
     public float movementSpeed = 5;
     private bool attack;
-    private bool isPlayerInBlob;
-    private int distanceFromPlayer = ; // Needs to be set
+    private bool isPlayerInBlob = false;
+    private int distanceFromPlayer = 25; // Needs to be set
     private int threshold = 50; // Minimum distance from when it starts being checked
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
+        randomNumberGen();
     }
 
     // Update is called once per frame
@@ -28,13 +29,17 @@ public class NewEnemyBehavior : MonoBehaviour
     {
         if (isPlayerInBlob)
         {
-            // write do chase
+            Vector3 p = player.transform.position;
             return true;
-            // player.transform.position
         }
         else if (distanceFromPlayer < threshold) // If distanceFromPlayer is smaller, it keeps running randomNumberGen() until it hits 0, 10% chance
         {
             randomNumberGen();
+            return false;
+        }
+        else
+        {
+            return false;
         }
     }
 
@@ -44,8 +49,7 @@ public class NewEnemyBehavior : MonoBehaviour
         int max = 10; // Upper bound not included on Next() according to C# docs
         // https://docs.microsoft.com/en-us/dotnet/api/system.random.next?view=netframework-4.7.2
 
-        Random random = new Random();
-        int n = random.Next(min, max);
+        int n = Random.Range(min, max);
 
         if (n < 1)
         {
