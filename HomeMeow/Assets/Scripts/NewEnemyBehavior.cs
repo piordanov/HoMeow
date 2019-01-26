@@ -19,4 +19,9 @@ public class NewEnemyBehavior : MonoBehaviour
         transform.LookAt(player.transform);
         transform.position += transform.forward * movementSpeed * Time.deltaTime;
     }
+
+    private void Behavior()
+    {
+        player = player.transform.position;
+    }
 }
