@@ -35,12 +35,12 @@ public class NewEnemyBehavior : MonoBehaviour
         else if (distanceFromPlayer < threshold) // If distanceFromPlayer is smaller, it keeps running randomNumberGen() until it hits 0, 10% chance
         {
             randomNumberGen();
-            return false;
         }
         else
         {
             return false;
         }
+        return false;
     }
 
     private bool randomNumberGen()
