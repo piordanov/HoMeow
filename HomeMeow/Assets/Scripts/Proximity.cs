@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Proximity : MonoBehaviour
 {
-
     EnemyBehavior myParent;
     // Start is called before the first frame update
     void Start()
@@ -35,5 +34,4 @@ public class Proximity : MonoBehaviour
             Debug.Log("you good");
         }
     }
-
 }
