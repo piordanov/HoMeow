@@ -4,28 +4,40 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
-{
-    public float movementspeed = 1f;
+{    
+    public float speed = 7f;
+    private Rigidbody rb3d;
+    private Vector3 movement;
 
-
-    // Use this for initialization
     void Start()
     {
-        
+        rb3d = GetComponent<Rigidbody> ();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate() 
     {
-        transform.Translate(movementspeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, movementspeed * Input.GetAxis("Vertical") * Time.deltaTime);
+        //Store the current horizontal input in the float moveHorizontal.
+        float moveHorizontal = Input.GetAxisRaw ("Horizontal");
+
+        //Store the current vertical input in the float moveVertical.
+        float moveVertical = Input.GetAxisRaw ("Vertical");
+
+        Move(moveHorizontal, moveVertical);
 
     }
 
+    void Move (float moveHorizontal, float moveVertical)
+    {
+        movement.Set(moveHorizontal, 0f, moveVertical);
+        movement = movement.normalized * speed * Time.deltaTime;
+
+        rb3d.MovePosition(transform.position + movement);
+    }
+    
     void OnTriggerExit(Collider other)
     {
 
     }
-
 
     void OnTriggerEnter(Collider other)
     {
