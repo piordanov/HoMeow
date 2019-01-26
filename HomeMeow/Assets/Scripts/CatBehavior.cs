@@ -7,6 +7,7 @@ public class CatBehavior : MonoBehaviour
 
     public float movementSpeed = 4;
     public bool inBoundary;
+    public bool nearbyKit;
 
     public GameObject player;
 
@@ -20,10 +21,10 @@ public class CatBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        transform.LookAt(player.transform);
         if (inBoundary == false)
         {
-            transform.LookAt(player.transform);
+            
             transform.position += transform.forward * movementSpeed * Time.deltaTime;
         }
     }
