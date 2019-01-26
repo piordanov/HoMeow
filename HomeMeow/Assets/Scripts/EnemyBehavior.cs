@@ -19,7 +19,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         timeToChangeDirection -= Time.deltaTime;
 
-        if (runAway == true)
+        if (runAway == true) 
         {
             GameObject playerObject = GameObject.Find("Player");
             Vector3 direction = transform.position - playerObject.transform.position;
