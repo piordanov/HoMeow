@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class NewEnemyBehavior : MonoBehaviour
 {
-
-    public GameObject Player;
-    public float movementSpeed = 4;
+    private GameObject player;
+    public float movementSpeed = 5;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(Player.transform);
+        transform.LookAt(player.transform);
         transform.position += transform.forward * movementSpeed * Time.deltaTime;
     }
 }

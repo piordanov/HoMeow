@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
-{    
+{
     public float speed = 7f;
     private Rigidbody rb3d;
     private Vector3 movement;
@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
         rb3d = GetComponent<Rigidbody> ();
     }
 
-    void FixedUpdate() 
+    void FixedUpdate()
     {
         //Store the current horizontal input in the float moveHorizontal.
         float moveHorizontal = Input.GetAxisRaw ("Horizontal");
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
         rb3d.MovePosition(transform.position + movement);
     }
-    
+
     void OnTriggerExit(Collider other)
     {
 
@@ -41,8 +41,6 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        
+
     }
-
-
 }
