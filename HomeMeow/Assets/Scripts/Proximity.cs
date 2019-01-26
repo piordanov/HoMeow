@@ -21,8 +21,8 @@ public class Proximity : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            myParent.runAway = true;
-            Debug.Log("runAway");
+            myParent.inBoundary = true;
+            Debug.Log("In Boundary");
         }
     }
 
@@ -30,8 +30,8 @@ public class Proximity : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            myParent.runAway = false;
-            Debug.Log("you good");
+            myParent.inBoundary = false;
+            Debug.Log("Out Boundary");
         }
     }
 }
