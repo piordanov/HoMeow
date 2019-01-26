@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Proximity : MonoBehaviour
 {
-    EnemyBehavior myParent;
+    CatBehavior myParent;
     // Start is called before the first frame update
     void Start()
     {
-        myParent = transform.parent.GetComponent<EnemyBehavior>();
+        myParent = transform.parent.GetComponent<CatBehavior>();
     }
 
     // Update is called once per frame
