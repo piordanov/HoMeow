@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    [SerializeField]
-    private float speed = 0.3f;
-
+    
+    public float speed = 700f;
     private Rigidbody rb3d;
+    private Vector3 movement;
 
     void Start()
     {
@@ -18,14 +17,21 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate() 
     {
         //Store the current horizontal input in the float moveHorizontal.
-        float moveHorizontal = Input.GetAxis ("Horizontal");
+        float moveHorizontal = Input.GetAxisRaw ("Horizontal");
 
         //Store the current vertical input in the float moveVertical.
-        float moveVertical = Input.GetAxis ("Vertical");
+        float moveVertical = Input.GetAxisRaw ("Vertical");
 
-        Vector3 movement = new Vector3 (moveHorizontal, 0, moveVertical);
-
-        rb3d.AddForce(movement * speed);
+        Move(moveHorizontal, moveVertical);
 
     }
+
+    void Move (float moveHorizontal, float moveVertical)
+    {
+        movement.Set(moveHorizontal, 0f, moveVertical);
+        movement = movement.normalized * speed * Time.deltaTime;
+
+        rb3d.MovePosition(transform.position + movement);
+    }
+
 }
