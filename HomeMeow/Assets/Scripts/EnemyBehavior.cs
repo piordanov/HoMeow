@@ -5,12 +5,12 @@ using UnityEngine;
 public class EnemyBehavior : MonoBehaviour
 {
     private float timeToChangeDirection;
-    public bool runAway;
+    public bool inBoundary;
 
     // Start is called before the first frame update
     void Start()
     {
-        runAway = false;
+        inBoundary = false;
         Movement();
     }
 
@@ -19,7 +19,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         timeToChangeDirection -= Time.deltaTime;
 
-        if (runAway == true) 
+        if (inBoundary == true) 
         {
             GameObject playerObject = GameObject.Find("Player");
             Vector3 direction = transform.position - playerObject.transform.position;
