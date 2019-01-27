@@ -70,4 +70,8 @@ public class InventoryController : MonoBehaviour
             //     equippedItem -= 1;
             // }
     }
+
+    public void AddItem(int index) {
+        itemCounts[index] += 1;
+    }
 }

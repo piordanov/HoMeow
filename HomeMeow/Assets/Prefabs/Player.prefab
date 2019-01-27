@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1301659805908636048}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,3 +151,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c89ce6755cc6d4cb19f36e3f171946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 1
+  currentHealth: 0
+  damageImage: {fileID: 0}
+  deathClip: {fileID: 0}
+  flashSpeed: 5
+  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
+  anim: {fileID: 0}
+  playerAudio: {fileID: 0}
+  playerController: {fileID: 0}

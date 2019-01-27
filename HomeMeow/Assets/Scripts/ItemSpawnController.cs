@@ -5,27 +5,32 @@ using UnityEngine.Events;
 
 public class ItemSpawnController : MonoBehaviour
 {
-    [SerializeField]
-    private UnityEvent onAquired;
+    private GameObject player;
+    public int index; // what type of object to obtain
 
     float bobSpeed = 2f;
-    float rotSpeed = 3f;
+    float rotSpeed = 40f;
     float height = 0.5f;
 
-    // Update is called once per frame
-    void Update()
+    void Start() 
     {
-        transform.Rotate(Vector3.up, rotSpeed * Time.deltaTime);
+        player = GameObject.Find("Player");
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        transform.Rotate(0, rotSpeed * Time.deltaTime, 0);
         Vector3 pos = transform.position;
-        float newY = Mathf.Sin(Time.time * bobSpeed);
-        transform.position = new Vector3(pos.x, newY, pos.z) * height;
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            onAquired.Invoke();
+            InventoryController inventory = player.GetComponent<InventoryController> ();
+            inventory.AddItem(index);
+            Destroy(gameObject);
         }
     }
 
