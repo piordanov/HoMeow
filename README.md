@@ -7,14 +7,14 @@
 - Programmers:
     - [Anna Shabayev](https://github.com/ashabayev)
     - [Ethan](https://github.com/theejdavidson)
-    - [Haris](https://github.com/)
+    - [Haris](https://github.com/wulf)
     - [Leo](https://github.com/leohlim)
     - [Lucas Perez](https://github.com/donatelucas)
     - [Peter](https://github.com/piordanov)
 
 - Art Team:
-    - Vanessa Wysmierski
-    - Sisi
+    - [Vanessa Wysmierski](https://instagram.com/vwyz)
+    - [Sisi](http://twitter.com/six6jiang)
     - [Marcus](https://www.deviantart.com/myndmon)
 
 - Sound:
