@@ -19,7 +19,7 @@ public class Proximity : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")  && myParent != null)
         {
             myParent.inBoundary = true;
             Debug.Log("In Boundary");
@@ -33,7 +33,7 @@ public class Proximity : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && myParent != null)
         {
             myParent.inBoundary = false;
             Debug.Log("Out Boundary");

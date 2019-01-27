@@ -7,7 +7,7 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth = 1;        //Total starting health
+    public int startingHealth = 3;        //Total starting health
     public int currentHealth;               //Current amount of player health    public Image damageImage;               //Image that flashes on screen when taking damage
 
 
@@ -16,9 +16,8 @@ public class PlayerHealth : MonoBehaviour
     public float flashSpeed = 5f;           //The speed that the damageImage will fade
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); //The colour the damageImage will flash
 
-    public Animator anim;                          //Reference to animator component
-    public AudioSource playerAudio;                //References AudioSource component.
-    public PlayerController playerController;          //References player's movement
+    AudioSource playerAudio;                //References AudioSource component.
+    PlayerController playerController;          //References player's movement
     bool isDead;                            //Whether player is dead.
     bool damaged;                           //True when player gets damaged.
 
@@ -27,7 +26,6 @@ public class PlayerHealth : MonoBehaviour
     {
         //Reference setup
 
-        anim = GetComponent <Animator>();
         playerAudio = GetComponent <AudioSource>();
         playerController = GetComponent <PlayerController>();
 
@@ -42,13 +40,13 @@ public class PlayerHealth : MonoBehaviour
         if(damaged)
         {
             //...set color of damageImage to flash color
-            damageImage.color = flashColour;
+            //damageImage.color = flashColour;
         }
         //Otherwise...
         else
         {
             //...transition color back to clear
-            // damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+            //damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
 
         //Reset the damaged flag.
@@ -58,6 +56,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage (int amount)
     {
+        Debug.Log("des");
         //Set the damaged flag so screen will flash
         damaged = true;
 
@@ -65,7 +64,10 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= amount;
 
         //Play hurt sound effect
-        playerAudio.Play ();
+        if(playerAudio != null) {
+            playerAudio.Play ();
+        }
+        
 
         //If the player has lost all it's health and the death flag hasn't been set
         if(currentHealth <= 0 && !isDead)
@@ -77,13 +79,12 @@ public class PlayerHealth : MonoBehaviour
 
     void Death ()
     {
+        Destroy(gameObject);
+        Debug.Log("U r ded");
         //Set the death flag so this function won't be recalled
         isDead = true;
 
         //Turn off any shooting effects
-
-        //Tell the animator that the player is dead.
-        anim.SetTrigger ("Die");
 
         //Set the audiosource to play the death clip and play it (this will stop hurt sound)
         playerAudio.clip = deathClip;
