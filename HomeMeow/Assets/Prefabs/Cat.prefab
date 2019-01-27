@@ -90,7 +90,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2055378766
 MonoBehaviour:
@@ -104,7 +104,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f39bba81c233cb4995790c23646b7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  source: {fileID: 0}
+  Steps: []
+  EnemyDetectedSound: {fileID: 0}
+  CatFollowMeSound: {fileID: 0}
+  CatFoundSound: {fileID: 0}
+  movementSpeed: 4
   inBoundary: 0
   nearbyKit: 0
   foundSomething: 0
