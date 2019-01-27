@@ -23,7 +23,7 @@ public class DetectObject : MonoBehaviour
         {
             myParent.nearbyKit = true;
             myParent.nearestRepairKit = other.gameObject;
-            Debug.Log("Found repair kit");
+            myParent.source.PlayOneShot(myParent.CatFollowMeSound);
         }
         if (other.gameObject.CompareTag("Player"))
         {
