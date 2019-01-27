@@ -31,10 +31,13 @@ public class NewEnemyBehavior : MonoBehaviour
         if (isPlayerInBlob)
         {
             Vector3 p = player.transform.position;
+
+            // DO CHASE
             return true;
         }
         else if (distanceFromPlayer < threshold) // If distanceFromPlayer is smaller, it keeps running randomNumberGen() until it hits 0, 10% chance
         {
+            isPlayerInBlob = true;
             randomNumberGen();
         }
         else
@@ -47,8 +50,7 @@ public class NewEnemyBehavior : MonoBehaviour
     private bool randomNumberGen()
     {
         int min = 0;
-        int max = 10; // Upper bound not included on Next() according to C# docs
-        // https://docs.microsoft.com/en-us/dotnet/api/system.random.next?view=netframework-4.7.2
+        int max = 10; // Upper bound exclusive
 
         int n = Random.Range(min, max);
 
