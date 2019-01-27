@@ -1,17 +1,20 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ToolboxCounter : MonoBehaviour
 {
-    public int toolboxPoints = 0;
+    private int count;
     // Start is called before the first frame update
-    
+
+    void Start()
+    {
+        count = 0;
+        OnGUI();
+    }
 
     // Update is called once per frame
-    private void OnGUI()
+    void OnGUI()
     {
-        Debug.Log("Hello");
-        GUI.Label(new Rect(10, 10, 100, 20), " " + toolboxPoints);
+        GUI.Label(new Rect(10, 10, 100, 20), "Hello World!");
     }
 }
