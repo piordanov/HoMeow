@@ -7,11 +7,11 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth = 100;        //Total starting health
-    public int currentHealth;               //Current amount of player health
-    public Slider healthSlider;             //References the UI image of health
-    public Image damageImage;               //Image that flashes on screen when taking damage
+    public int startingHealth = 1;        //Total starting health
+    public int currentHealth;               //Current amount of player health    public Image damageImage;               //Image that flashes on screen when taking damage
 
+
+    public Image damageImage;
     public AudioClip deathClip;             //Audio clip that plays when player dies
     public float flashSpeed = 5f;           //The speed that the damageImage will fade
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f); //The colour the damageImage will flash
@@ -63,9 +63,6 @@ public class PlayerHealth : MonoBehaviour
 
         //Reduce current health by damage amount
         currentHealth -= amount;
-
-        //Set the health bar's value to the current health. 
-        healthSlider.value = currentHealth;
 
         //Play hurt sound effect
         playerAudio.Play ();
