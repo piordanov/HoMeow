@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 
@@ -52,6 +53,8 @@ public class PlayerHealth : MonoBehaviour
         //Reset the damaged flag.
 
         damaged = false;
+
+        // if()
     }
 
     public void TakeDamage (int amount)
@@ -92,5 +95,7 @@ public class PlayerHealth : MonoBehaviour
 
         //Turn off movement and shooting
         playerController.enabled = false;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
