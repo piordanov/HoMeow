@@ -61,6 +61,7 @@ public class InventoryController : MonoBehaviour
     }
 
     void ConsumeItem() {
+        Debug.Log("Fired");
         if (itemCounts[equippedItem] > 0) {
             itemCounts[equippedItem] -= 1;
             Instantiate(items[equippedItem], transform.position, transform.rotation);
