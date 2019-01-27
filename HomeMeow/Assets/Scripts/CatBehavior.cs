@@ -14,7 +14,7 @@ public class CatBehavior : MonoBehaviour
     void Start()
     {
         inBoundary = false;
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame

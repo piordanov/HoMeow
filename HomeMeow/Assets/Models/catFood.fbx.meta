@@ -18,7 +18,12 @@ ModelImporter:
     4300000: Cylinder
     6400000: Cylinder
     10800000: Light
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base
+    second: {fileID: 2100000, guid: 1479661c76f16c94591e7bb1c9af2a5c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
