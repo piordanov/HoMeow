@@ -17,19 +17,5 @@ public class EnemyDetection : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            myParent.source.PlayOneShot(myParent.EnemyDetectedSound, 1);
-            myParent.enemyDetected = true;
-        }
-    }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            myParent.enemyDetected = false;
-        }
-    }
+    
 }
