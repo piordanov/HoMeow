@@ -23,6 +23,7 @@ public class NewEnemyBehavior : MonoBehaviour
     {
         transform.LookAt(player.transform);
         transform.position += transform.forward * movementSpeed * Time.deltaTime;
+        Chase();
     }
 
     private bool Chase()
@@ -53,10 +54,12 @@ public class NewEnemyBehavior : MonoBehaviour
 
         if (n < 1)
         {
+            print("Random is " + n);
             return true;
         }
         else
         {
+            print("Random is " + n);
             return false;
         }
     }
