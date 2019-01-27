@@ -13,9 +13,9 @@
     - [Peter](https://github.com/piordanov)
 
 - Art Team:
-    - [Vanessa Wysmierski](https://instagram.com/vwyz)
-    - [Sisi](http://twitter.com/six6jiang)
     - [Marcus](https://www.deviantart.com/myndmon)
+    - [Sisi](http://twitter.com/six6jiang)
+    - [Vanessa Wysmierski](https://instagram.com/vwyz)
 
 - Sound:
     - [Thor Bremer](http://www.toothgrinderlabs.com)
