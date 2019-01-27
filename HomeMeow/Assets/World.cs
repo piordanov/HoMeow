@@ -35,7 +35,8 @@ public class World {
         this.generateWorld();
         this.generateIsland();
         this.generateIsland();
-        this.generateItems();
+        this.generateIsland();
+       //this.generateItems();
         this.generateMeshes();
         
         built = true;
