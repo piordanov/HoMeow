@@ -28,6 +28,7 @@ public class Proximity : MonoBehaviour
         if (other.gameObject.CompareTag("Repair Kit"))
         {
             myParent.foundSomething = true;
+            myParent.source.PlayOneShot(myParent.CatFoundSound, 1);
         }
     }
     void OnTriggerExit(Collider other)
