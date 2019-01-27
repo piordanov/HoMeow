@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WinCondition : MonoBehaviour
 {
+    void Start() {
+        this.updateCatCounterUI();
+    }
+
     private int catsSaved = 0;
     
     void OnTriggerEnter(Collider other) {
@@ -16,7 +21,7 @@ public class WinCondition : MonoBehaviour
                 // do nothing; the cat is already saved!
             } else {
                 catsSaved += 1;
-
+                updateCatCounterUI();
                 // stop cat from moving
                 cb.saved = true;
                 cb.movementSpeed = 0;
@@ -25,6 +30,16 @@ public class WinCondition : MonoBehaviour
                     winGame();
                 }
             }
+        }
+    }
+
+    void updateCatCounterUI() {
+        GameObject[] catCounter = GameObject.FindGameObjectsWithTag("CatCounter");
+        for(int i = 0; i < catCounter.Length; i++) {
+            Image cc =catCounter[i].GetComponent<Image>();
+            var tempColor = cc.color;
+            tempColor.a = catsSaved <= i ? 0.3f : 1f;
+            cc.color = tempColor;
         }
     }
 
