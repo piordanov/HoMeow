@@ -5,17 +5,17 @@
 
 # Team
 - Programmers:
-    - Anna Shabayev
-    - Ethan
-    - Haris 
-    - Leo
-    - [Lucas Perez](github.com/donatelucas)
-    - Peter
+    - [Anna Shabayev](https://github.com/ashabayev)
+    - [Ethan](https://github.com/theejdavidson)
+    - [Haris](https://github.com/)
+    - [Leo](https://github.com/leohlim)
+    - [Lucas Perez](https://github.com/donatelucas)
+    - [Peter](https://github.com/piordanov)
 
 - Art Team:
     - Vanessa Wysmierski
     - Sisi
-    - Marcus
+    - [Marcus](https://www.deviantart.com/myndmon)
 
 - Sound:
-    - Thor Bremer
+    - [Thor Bremer](http://www.toothgrinderlabs.com)
