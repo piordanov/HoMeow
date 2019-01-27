@@ -7,7 +7,7 @@
 - Programmers:
     - Anna Shabayev
     - Ethan
-    - Haris
+    - Haris 
     - Leo
     - [Lucas Perez](github.com/donatelucas)
     - Peter
