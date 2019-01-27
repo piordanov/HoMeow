@@ -24,7 +24,7 @@ public class CatBehavior : MonoBehaviour
         playerLeft = false;
         runAway = false;
 
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
