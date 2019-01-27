@@ -26,6 +26,10 @@ public class ItemSpawnController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             onAquired.Invoke();
+
+            //add 1 to counter
+
+            //destroy gameobject
         }
     }
 
