@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2055378766}
   m_Layer: 0
   m_Name: Cat
-  m_TagString: Untagged
+  m_TagString: cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,4 +106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 2
   inBoundary: 0
-  player: {fileID: 0}
+  nearbyKit: 0
+  foundSomething: 0
+  playerLeft: 0
+  enemyDetected: 0
+  runAway: 0
+  nearestRepairKit: {fileID: 0}
