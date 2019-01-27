@@ -929,7 +929,6 @@ Rigidbody:
   m_Constraints: 116
   m_CollisionDetection: 3
 <<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1001 &2092053895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -988,8 +987,6 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffe610b5781cb4399932b542e626ad28, type: 3}
 =======
-=======
->>>>>>> efc5bb9c372e0e56c5c06d9a75250a750ed4d76e
 --- !u!1 &2081776862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,10 +1084,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081776862}
   m_Mesh: {fileID: 4300000, guid: 24c2e03e30f0af54a994286cfdfe017d, type: 3}
-<<<<<<< HEAD
 >>>>>>> 7be7db27465828ae502fe98d6410bc9d0adc66fe
-=======
->>>>>>> efc5bb9c372e0e56c5c06d9a75250a750ed4d76e
 --- !u!1 &2129001037
 GameObject:
   m_ObjectHideFlags: 0
