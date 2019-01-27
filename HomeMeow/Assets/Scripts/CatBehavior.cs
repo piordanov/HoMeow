@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CatBehavior : MonoBehaviour
 {
-    public AudioSource source;
+    // public AudioSource source;
     public AudioClip[] Steps;
     public AudioClip EnemyDetectedSound;
     public AudioClip CatFollowMeSound;
@@ -25,7 +25,7 @@ public class CatBehavior : MonoBehaviour
 
     void Awake()
     {
-        source = GetComponent<AudioSource>();
+        // source = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -52,10 +52,10 @@ public class CatBehavior : MonoBehaviour
         {
             transform.LookAt(player.transform);
             transform.position += transform.forward * movementSpeed * Time.deltaTime;
-            if (!source.isPlaying)
-            {
-                source.PlayOneShot(Steps[Random.Range(0, 1)], 0.7f); //walking
-            }
+            // if (!source.isPlaying)
+            // {
+            //     source.PlayOneShot(Steps[Random.Range(0, 1)], 0.7f); //walking
+            // }
         }
         else if (nearbyKit && !playerLeft) //found a kit with player in vicinity
         {
@@ -67,10 +67,10 @@ public class CatBehavior : MonoBehaviour
             {
                 transform.LookAt(nearestRepairKit.transform);
                 transform.position += transform.forward * movementSpeed * Time.deltaTime;
-                if (!source.isPlaying)
-                {
-                    source.PlayOneShot(Steps[Random.Range(0, 1)], 0.7f); //walking
-                }
+                // if (!source.isPlaying)
+                // {
+                //     source.PlayOneShot(Steps[Random.Range(0, 1)], 0.7f); //walking
+                // }
             }
 
         }
@@ -78,10 +78,10 @@ public class CatBehavior : MonoBehaviour
         {
             transform.LookAt(player.transform);
             transform.position += transform.forward * movementSpeed * Time.deltaTime;
-            if (!source.isPlaying)
-            {
-                source.PlayOneShot(Steps[Random.Range(0, 1)], 0.7f); //walking
-            }
+            // if (!source.isPlaying)
+            // {
+            //     source.PlayOneShot(Steps[Random.Range(0, 1)], 0.7f); //walking
+            // }
         }
 
 

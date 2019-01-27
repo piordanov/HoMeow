@@ -21,7 +21,7 @@ public class EnemyDetection : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            myParent.source.PlayOneShot(myParent.EnemyDetectedSound, 1);
+            // myParent.source.PlayOneShot(myParent.EnemyDetectedSound, 1);
             myParent.enemyDetected = true;
         }
     }

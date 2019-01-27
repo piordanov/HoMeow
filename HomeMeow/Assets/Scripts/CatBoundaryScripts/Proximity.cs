@@ -25,11 +25,11 @@ public class Proximity : MonoBehaviour
             Debug.Log("In Boundary");
         }
 
-        if (other.gameObject.CompareTag("Repair Kit"))
-        {
-            myParent.foundSomething = true;
-            myParent.source.PlayOneShot(myParent.CatFoundSound, 1);
-        }
+        // if (other.gameObject.CompareTag("Repair Kit"))
+        // {
+        //     myParent.foundSomething = true;
+        //     myParent.source.PlayOneShot(myParent.CatFoundSound, 1);
+        // }
     }
     void OnTriggerExit(Collider other)
     {
@@ -38,9 +38,9 @@ public class Proximity : MonoBehaviour
             myParent.inBoundary = false;
             Debug.Log("Out Boundary");
         }
-        if (other.gameObject.CompareTag("Repair Kit"))
-        {
-            myParent.foundSomething = false;
-        }
+        // if (other.gameObject.CompareTag("Repair Kit"))
+        // {
+        //     myParent.foundSomething = false;
+        // }
     }
 }
