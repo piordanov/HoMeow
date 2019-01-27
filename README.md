@@ -6,14 +6,14 @@
 # Team
 - Programmers:
     - [Anna Shabayev](https://github.com/ashabayev)
-    - [Ethan](https://github.com/theejdavidson)
-    - [Haris](https://github.com/wulf)
-    - [Leo](https://github.com/leohlim)
+    - [Ethan Davidson](https://github.com/theejdavidson)
+    - [Haris Khan](https://github.com/wulf)
+    - [Leo Herrera-Lim](https://github.com/leohlim)
     - [Lucas Perez](https://github.com/donatelucas)
-    - [Peter](https://github.com/piordanov)
+    - [Peter Iordanov](https://github.com/piordanov)
 
 - Art Team:
-    - [Marcus](https://www.deviantart.com/myndmon)
+    - [Marcus Clay](https://www.deviantart.com/myndmon)
     - [Sisi](http://twitter.com/six6jiang)
     - [Vanessa Wysmierski](https://instagram.com/vwyz)
 
