@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             //...transition color back to clear
-            damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+            // damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
 
         //Reset the damaged flag.
