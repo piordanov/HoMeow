@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class CatBehavior : MonoBehaviour
 {
+    public AudioSource source;
+    public AudioClip[] Steps;
+    public AudioClip EnemyDetectedSound;
+    public AudioClip CatFollowMeSound;
+    public AudioClip CatFoundSound;
 
     public float movementSpeed = 4;
     public bool inBoundary;
@@ -14,7 +19,14 @@ public class CatBehavior : MonoBehaviour
     public bool runAway;
     public GameObject nearestRepairKit;
 
+    
+
     private GameObject player;
+
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +42,7 @@ public class CatBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (runAway)
         {
             movementSpeed = 8;
@@ -39,18 +52,25 @@ public class CatBehavior : MonoBehaviour
         {
             transform.LookAt(player.transform);
             transform.position += transform.forward * movementSpeed * Time.deltaTime;
+            if (!source.isPlaying)
+            {
+                source.PlayOneShot(Steps[Random.Range(0, 1)], 0.7f); //walking
+            }
         }
         else if (nearbyKit && !playerLeft) //found a kit with player in vicinity
         {
             if (foundSomething == true)
             {
                 transform.LookAt(player.transform);
-
             }
             else
             {
                 transform.LookAt(nearestRepairKit.transform);
                 transform.position += transform.forward * movementSpeed * Time.deltaTime;
+                if (!source.isPlaying)
+                {
+                    source.PlayOneShot(Steps[Random.Range(0, 1)], 0.7f); //walking
+                }
             }
 
         }
@@ -58,6 +78,10 @@ public class CatBehavior : MonoBehaviour
         {
             transform.LookAt(player.transform);
             transform.position += transform.forward * movementSpeed * Time.deltaTime;
+            if (!source.isPlaying)
+            {
+                source.PlayOneShot(Steps[Random.Range(0, 1)], 0.7f); //walking
+            }
         }
 
 
