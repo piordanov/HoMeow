@@ -7591,6 +7591,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2055378766, guid: f7f44fd812f84c24d98f08aaa3949c84, type: 3}
+      propertyPath: CatFoundSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c3ec924bb4b30fb9b01a1e85263644f, type: 3}
+    - target: {fileID: 2055378766, guid: f7f44fd812f84c24d98f08aaa3949c84, type: 3}
+      propertyPath: EnemyDetectedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 240eedada92324840a72854187155cc3, type: 3}
+    - target: {fileID: 2055378766, guid: f7f44fd812f84c24d98f08aaa3949c84, type: 3}
+      propertyPath: CatFollowMeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 41f853b09804e0840be2c1131566aa17, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7f44fd812f84c24d98f08aaa3949c84, type: 3}
 --- !u!4 &308993643 stripped
@@ -37806,6 +37818,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2055378766, guid: f7f44fd812f84c24d98f08aaa3949c84, type: 3}
+      propertyPath: CatFoundSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c3ec924bb4b30fb9b01a1e85263644f, type: 3}
+    - target: {fileID: 2055378766, guid: f7f44fd812f84c24d98f08aaa3949c84, type: 3}
+      propertyPath: CatFollowMeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 41f853b09804e0840be2c1131566aa17, type: 3}
+    - target: {fileID: 2055378766, guid: f7f44fd812f84c24d98f08aaa3949c84, type: 3}
+      propertyPath: EnemyDetectedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 240eedada92324840a72854187155cc3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7f44fd812f84c24d98f08aaa3949c84, type: 3}
 --- !u!1001 &1637500572
@@ -60625,7 +60649,7 @@ PrefabInstance:
     - target: {fileID: 2055378766, guid: f7f44fd812f84c24d98f08aaa3949c84, type: 3}
       propertyPath: CatFoundSound
       value: 
-      objectReference: {fileID: 8300000, guid: 8f9a502d734173741a56fdf96a979bdb, type: 3}
+      objectReference: {fileID: 8300000, guid: 6c3ec924bb4b30fb9b01a1e85263644f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7f44fd812f84c24d98f08aaa3949c84, type: 3}
 --- !u!1001 &7242337401479719320

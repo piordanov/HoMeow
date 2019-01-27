@@ -25,6 +25,7 @@ public class WinCondition : MonoBehaviour
                 // stop cat from moving
                 cb.saved = true;
                 cb.movementSpeed = 0;
+                cb.source.PlayOneShot(cb.CatFoundSound);
 
                 if(catsSaved >= 3) {
                     winGame();

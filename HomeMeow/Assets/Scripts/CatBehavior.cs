@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CatBehavior : MonoBehaviour
 {
-    // public AudioSource source;
+    public AudioSource source;
     public AudioClip[] Steps;
     public AudioClip EnemyDetectedSound;
     public AudioClip CatFollowMeSound;
@@ -26,7 +26,7 @@ public class CatBehavior : MonoBehaviour
 
     void Awake()
     {
-        // source = GetComponent<AudioSource>();
+        source = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
