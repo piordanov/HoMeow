@@ -7,6 +7,7 @@
 - Programmers:
     - Anna Shabayev
     - Ethan
+    - Haris 
     - Leo
     - [Lucas Perez](github.com/donatelucas)
     - Peter
@@ -17,4 +18,4 @@
     - Marcus
 
 - Sound:
-    - Thor Bremer 
+    - Thor Bremer
