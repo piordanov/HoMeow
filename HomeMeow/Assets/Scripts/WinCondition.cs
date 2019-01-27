@@ -9,15 +9,21 @@ public class WinCondition : MonoBehaviour
     
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("cat")) {
-            catsSaved += 1;
             GameObject cat = other.gameObject;
-
-            // stop cat from moving
             CatBehavior cb = cat.GetComponent<CatBehavior>();
-            cb.movementSpeed = 0;
 
-            if(catsSaved >= 3) {
-                winGame();
+            if(cb.saved == true) {
+                // do nothing; the cat is already saved!
+            } else {
+                catsSaved += 1;
+
+                // stop cat from moving
+                cb.saved = true;
+                cb.movementSpeed = 0;
+
+                if(catsSaved >= 3) {
+                    winGame();
+                }
             }
         }
     }

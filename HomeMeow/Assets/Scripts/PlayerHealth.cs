@@ -96,6 +96,6 @@ public class PlayerHealth : MonoBehaviour
         //Turn off movement and shooting
         playerController.enabled = false;
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 }

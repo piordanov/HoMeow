@@ -27,7 +27,7 @@ public class FeralAttack : MonoBehaviour
         //If the entering collider is the player...
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("isthisworking");
+            // Debug.Log("isthisworking");
             //... player is in range
             playerInRange = true;
         }
@@ -38,7 +38,7 @@ public class FeralAttack : MonoBehaviour
         // If the exiting collider is the player...
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player no long er in range.");
+            // Debug.Log("Player no long er in range.");
             //...player is no longer in range
             playerInRange = false;
         }
@@ -49,8 +49,8 @@ public class FeralAttack : MonoBehaviour
     {
         //Add time since Update was called to timer
         timer += Time.deltaTime;
-        Debug.Log(playerInRange);
-        Debug.Log(timer >= timeBetweenAttacks);
+        // Debug.Log(playerInRange);
+        // Debug.Log(timer >= timeBetweenAttacks);
         //If the timer exceeds the time between attacks, player is in range, and feral cat is still alive...
         if((timer >= timeBetweenAttacks) && playerInRange)
         {
@@ -69,11 +69,11 @@ public class FeralAttack : MonoBehaviour
             timer = 0f;
 
             //If player has health to lose...
-            Debug.Log("Trying to attack player");
+            // Debug.Log("Trying to attack player");
             if(playerHealth.currentHealth > 0)
             {
                 gameObject.GetComponent<FeralCatBehavior> ().runAway = true;
-            Debug.Log(" attacked player");
+            // Debug.Log(" attacked player");
                 //...damage the player.
                 playerHealth.TakeDamage (attackDamage);
             }

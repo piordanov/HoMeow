@@ -17,6 +17,7 @@ public class CatBehavior : MonoBehaviour
     public bool playerLeft;
     public bool enemyDetected;
     public bool runAway;
+    public bool saved = false;
     public GameObject nearestRepairKit;
 
     
