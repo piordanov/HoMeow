@@ -7,7 +7,7 @@ public class NewEnemyBehavior : MonoBehaviour
     private GameObject player;
     public int moveSpeed = 5;
     private int distanceFromPlayer = 1;
-    private int threshold = 25; // Maximum distance, technically. *Nicky Young gif*
+    private int threshold = 5; // Maximum distance, technically. *Nicky Young gif*
 
     // Start is called before the first frame update
     void Start()
