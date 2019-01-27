@@ -14,7 +14,7 @@ public class ItemSpawnController : MonoBehaviour
 
     void Start() 
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
