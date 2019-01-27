@@ -14,7 +14,7 @@ public class Proximity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -24,14 +24,22 @@ public class Proximity : MonoBehaviour
             myParent.inBoundary = true;
             Debug.Log("In Boundary");
         }
-    }
 
+        if (other.gameObject.CompareTag("Repair Kit"))
+        {
+            myParent.foundSomething = true;
+        }
+    }
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             myParent.inBoundary = false;
             Debug.Log("Out Boundary");
+        }
+        if (other.gameObject.CompareTag("Repair Kit"))
+        {
+            myParent.foundSomething = false;
         }
     }
 }
